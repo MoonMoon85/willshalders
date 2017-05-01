@@ -1,0 +1,67 @@
+/////////////////////////////
+///// Breakpoint Mixins /////
+/////////////////////////////
+
+$break-small: 561px;
+$break-medium: 769px;
+$break-large: 1041px;
+
+@mixin respond-to($media) {
+    @if $media == screen-sm {
+        @media only screen and (min-width: $break-small) { @content; }
+    }
+    @else if $media == screen-md {
+        @media only screen and (min-width: $break-medium) { @content; }
+    }
+    @else if $media == screen-lg {
+        @media only screen and (min-width: $break-large) { @content; }
+    }
+    @else if $media == hidpi {
+        @media
+            only screen and (-webkit-min-device-pixel-ratio: 1.3),
+            only screen and (-o-min-device-pixel-ratio: 13/10),
+            only screen and (min-resolution: 120dpi) { @content; }
+    }
+}
+
+@mixin respond-to-custom($width-name, $target-width) {
+    @media only screen and ($width-name: $target-width) { @content; }
+}
+
+@mixin respond-to-minmax($target-min-width, $target-max-width) {
+   @media only screen and (min-width: $target-min-width) and (max-width: $target-max-width) { @content; }
+}
+
+@mixin respond-to-language($lang) {
+    @at-root .#{$lang + ' ' + &} {
+        @content
+    }
+}
+
+/////////////////////////////
+///// Min-Max Font-Size /////
+/////////////////////////////
+
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+  
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+  
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+    
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+  
+  @if $fallback {
+    font-size: $fallback;
+  }
+  
+  font-size: $responsive;
+}
