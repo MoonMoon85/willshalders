@@ -9,6 +9,9 @@ body {
 	background: -webkit-linear-gradient(left, #fdfbfb 0%,#ebedee 100%);
 	background: linear-gradient(to right, #fdfbfb 0%,#ebedee 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfbfb', endColorstr='#ebedee',GradientType=1 );
+
+    background-image: url(../img/confetti-bg.svg);
+    background-repeat: repeat;
 }
 ul {
 	margin: 0;
