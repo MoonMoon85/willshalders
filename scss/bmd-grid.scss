@@ -38,14 +38,14 @@ html {
     margin-left: -5px;
     max-width: 1010px;
 }
-[class*="grid-"] img {
+[class*="grid-"] img,
+img {
     display: block;
     width: 100%;
     height: auto;
     min-height: 1px;
 }
 [class*="grid-"] {
-    
     position: relative;
     min-height: 1px;
     width: 100%;
