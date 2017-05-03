@@ -27,9 +27,7 @@ ul {
 .content-block {
 	margin-top: 40px;
 	margin-bottom: 40px;
-}
-.content-block:last-child {
-	margin-bottom: 0;
+	width: 100%;
 }
 h1 {
 	@include responsive-font(9vw, 36px, 70px);
@@ -85,6 +83,9 @@ a {
     padding: 0 0 1px;
     display: inline-block;
 }
+a:hover {
+	color: #83BDFF;
+}
 .logo{
 	max-width: 135px;
 }
@@ -138,13 +139,16 @@ a {
     	margin-bottom: 50px;
     }
 }
+.slides {
+	margin-top: 10px;
+}
 .slide {
 	margin-bottom: 10px;
 	.color-overlay {
 		position: absolute;
 		top: 0;
-		left: 1%;
-    	width: 98.2%;
+		left: 2%;
+    	width: 96.2%;
 		height: 100%;
 		opacity: .8;
 	}
@@ -153,6 +157,10 @@ a {
 		position: absolute;
 
 		h2 {
+			color: #fff;
+			margin-bottom: 0;
+		}
+		h3 {
 			color: #fff;
 			margin-bottom: 0;
 		}
@@ -167,6 +175,28 @@ a {
 			border: 1px solid #fff;
 			padding: 5px 10px;
 		}
+		a {
+			color: #fff;
+			font-weight: 300;
+			text-decoration: none;
+			border: 1px solid #fff;
+			padding: 5px 10px;
+			transition: top linear 8s;
+		}
+		a {
+			color: #fff;
+			font-weight: 300;
+			text-decoration: none;
+			border: 1px solid #fff;
+			padding: 5px 10px;
+			transition: background .25s ease-in-out;
+			transition: color .25s ease-in-out;
+		}
+		a:hover {
+			background: #fff;
+			color: #83BDFF;
+	    }
+		
 	}
 	img {
 		
@@ -179,11 +209,22 @@ a {
 	}
 	a {
 		border-color: #fff;
+		transition: background .25s ease-in-out;
+		transition: color .25s ease-in-out;
+	}
+	a:hover {
+		color: #83BDFF;
+    }
+	.go-back {
+		padding-top: 40px;
+
+    	@include respond-to(screen-md) {
+    		padding-top: 80px;
+    	}
 	}
     height: 100%;
 
 	.work-hero {
-		margin-bottom: 40px;
 
 		@include respond-to-minmax(0px, 769px) {
 			.mobile-screen {
@@ -278,13 +319,12 @@ a {
 
 			.desktop-screen {
 			    position: absolute;
-				width: 96%;
-				height: 85%;
-				overflow: hidden;
-				top: 11%;
-				left: 2%;
+			    width: 96%;
+			    height: 82%;
+			    overflow: hidden;
+			    top: 11%;
+			    left: 2%;
 			    border-bottom: 7px solid #fff;
-			    border-top: 7px solid #fff;
 
 			    img {
 			    	position: absolute;
@@ -297,26 +337,35 @@ a {
 		}
 	}
 }
-.resolve {
+.ursa {
+	a:hover {
+		color: #FBB3B4;
+	}
 	background: #83BDFF;
 	background: -moz-linear-gradient(left, #83BDFF 0%, #64ACFF 100%);
 	background: -webkit-linear-gradient(left, #83BDFF 0%,#64ACFF 100%);
 	background: linear-gradient(to right, #83BDFF 0%,#64ACFF 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83BDFF', endColorstr='#64ACFF',GradientType=1 );
 }
-.ursa {
+.resolve {
 	background: #FBB3B4;
 	background: -moz-linear-gradient(left, #FBB3B4 0%, #FC9FA1 100%);
 	background: -webkit-linear-gradient(left, #FBB3B4 0%,#FC9FA1 100%);
 	background: linear-gradient(to right, #FBB3B4 0%,#FC9FA1 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FBB3B4', endColorstr='#FC9FA1',GradientType=1 );
+	.mobile-screen {
+		border: 2px solid #fff;
+	}
+	.desktop-screen {
+		border: 7px solid #fff;
+	}
 }
-.resolve-slide {
+.ursa-slide {
 	.color-overlay {
 		background-color: #83BDFF;
 	}
 }
-.ursa-slide {
+.resolve-slide {
 	.color-overlay {
 		background-color: #FBB3B4;
 	}

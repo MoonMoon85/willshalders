@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	var movementStrength = 25;
+	var movementStrength = 50;
 	var height = movementStrength / $(window).height();
 	var width = movementStrength / $(window).width();
 	$("body").mousemove(function(e){
@@ -10,21 +10,21 @@ $(document).ready(function () {
 	          $('body').css("background-position", newvalueX+"px     "+newvalueY+"px");
 	});
 
-	$('.scroll-top-mobile').mouseover(function() {
-		$('.mobile-screen img').css("top", 0);
-	});
+	// $('.scroll-top-mobile').mouseover(function() {
+	// 	$('.mobile-screen img').css("top", 0);
+	// });
 
-	$('.scroll-bottom-mobile').mouseover(function() {
-		$('.mobile-screen img').css("top", -500);
-	});
+	// $('.scroll-bottom-mobile').mouseover(function() {
+	// 	$('.mobile-screen img').css("top", -500);
+	// });
 
-	$('.scroll-top-desktop').mouseover(function() {
-		$('.desktop-screen img').css("top", 0);
-	});
+	// $('.scroll-top-desktop').mouseover(function() {
+	// 	$('.desktop-screen img').css("top", 0);
+	// });
 
-	$('.scroll-bottom-desktop').mouseover(function() {
-		$('.desktop-screen img').css("top", -750);
-	});
+	// $('.scroll-bottom-desktop').mouseover(function() {
+	// 	$('.desktop-screen img').css("top", -750);
+	// });
 	
 
 
@@ -83,21 +83,21 @@ $(document).ready(function () {
 		      _this.done();
 		    });
 
-		    $('.scroll-top-mobile').mouseover(function() {
-				$('.mobile-screen img').css("top", 0);
-			});
+		 //    $('.scroll-top-mobile').mouseover(function() {
+			// 	$('.mobile-screen img').css("top", 0);
+			// });
 
-			$('.scroll-bottom-mobile').mouseover(function() {
-				$('.mobile-screen img').css("top", -1000);
-			});
+			// $('.scroll-bottom-mobile').mouseover(function() {
+			// 	$('.mobile-screen img').css("top", -1000);
+			// });
 
-			$('.scroll-top-desktop').mouseover(function() {
-				$('.desktop-screen img').css("top", 0);
-			});
+			// $('.scroll-top-desktop').mouseover(function() {
+			// 	$('.desktop-screen img').css("top", 0);
+			// });
 
-			$('.scroll-bottom-desktop').mouseover(function() {
-				$('.desktop-screen img').css("top", -2000);
-			});
+			// $('.scroll-bottom-desktop').mouseover(function() {
+			// 	$('.desktop-screen img').css("top", -2000);
+			// });
 
 		   
 		 }
