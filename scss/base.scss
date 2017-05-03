@@ -140,10 +140,19 @@ a {
 }
 .slide {
 	margin-bottom: 10px;
-
+	.color-overlay {
+		position: absolute;
+		top: 0;
+		left: 1%;
+    	width: 98.2%;
+		height: 100%;
+		opacity: .8;
+	}
 	.slider-content {
 		padding: 3% 0 40px 20px;
-		h3 {
+		position: absolute;
+
+		h2 {
 			color: #fff;
 			margin-bottom: 0;
 		}
@@ -158,7 +167,6 @@ a {
 			border: 1px solid #fff;
 			padding: 5px 10px;
 		}
-		position: absolute;	
 	}
 	img {
 		
@@ -175,24 +183,41 @@ a {
     height: 100%;
 
 	.work-hero {
-
 		margin-bottom: 40px;
 
-		.scroll-top-mobile,
-		.scroll-top-desktop {
-			opacity: 0;
-			width: 100%;
-			height: 50%;
-			position: absolute;
-			top: 0;
+		@include respond-to-minmax(0px, 769px) {
+			.mobile-screen {
+			    img {
+			    	top: 0 !important;
+			    	transition: top linear .1s !important;
+			    }
+			}
+
+			.desktop-screen {
+			    img {
+			    	top: 0 !important;
+			    	transition: top linear .1s !important;
+			    }
+			}
 		}
-		.scroll-bottom-mobile,
-		.scroll-bottom-desktop {
-			opacity: 0;
-			width: 100%;
-			height: 50%;
-			position: absolute;
-			bottom: 0;
+
+		@include respond-to(screen-md) {
+			.scroll-top-mobile,
+			.scroll-top-desktop {
+				opacity: 0;
+				width: 100%;
+				height: 50%;
+				position: absolute;
+				top: 0;
+			}
+			.scroll-bottom-mobile,
+			.scroll-bottom-desktop {
+				opacity: 0;
+				width: 100%;
+				height: 50%;
+				position: absolute;
+				bottom: 0;
+			}    
 		}
 
 		.mobile-device {
@@ -240,7 +265,7 @@ a {
 			display: none;
 
 			@include respond-to(screen-sm) {
-				display: flex;
+				display: block;
 				position: relative;
 			}
 
@@ -278,4 +303,21 @@ a {
 	background: -webkit-linear-gradient(left, #83BDFF 0%,#64ACFF 100%);
 	background: linear-gradient(to right, #83BDFF 0%,#64ACFF 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83BDFF', endColorstr='#64ACFF',GradientType=1 );
+}
+.ursa {
+	background: #FBB3B4;
+	background: -moz-linear-gradient(left, #FBB3B4 0%, #FC9FA1 100%);
+	background: -webkit-linear-gradient(left, #FBB3B4 0%,#FC9FA1 100%);
+	background: linear-gradient(to right, #FBB3B4 0%,#FC9FA1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FBB3B4', endColorstr='#FC9FA1',GradientType=1 );
+}
+.resolve-slide {
+	.color-overlay {
+		background-color: #83BDFF;
+	}
+}
+.ursa-slide {
+	.color-overlay {
+		background-color: #FBB3B4;
+	}
 }

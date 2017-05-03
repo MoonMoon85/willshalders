@@ -1032,10 +1032,17 @@ a {
 
 .slide {
   margin-bottom: 10px; }
+  .slide .color-overlay {
+    position: absolute;
+    top: 0;
+    left: 1%;
+    width: 98.2%;
+    height: 100%;
+    opacity: .8; }
   .slide .slider-content {
     padding: 3% 0 40px 20px;
     position: absolute; }
-    .slide .slider-content h3 {
+    .slide .slider-content h2 {
       color: #fff;
       margin-bottom: 0; }
     .slide .slider-content p {
@@ -1056,20 +1063,28 @@ a {
     border-color: #fff; }
   .work .work-hero {
     margin-bottom: 40px; }
-    .work .work-hero .scroll-top-mobile,
-    .work .work-hero .scroll-top-desktop {
-      opacity: 0;
-      width: 100%;
-      height: 50%;
-      position: absolute;
-      top: 0; }
-    .work .work-hero .scroll-bottom-mobile,
-    .work .work-hero .scroll-bottom-desktop {
-      opacity: 0;
-      width: 100%;
-      height: 50%;
-      position: absolute;
-      bottom: 0; }
+    @media only screen and (min-width: 0px) and (max-width: 769px) {
+      .work .work-hero .mobile-screen img {
+        top: 0 !important;
+        transition: top linear .1s !important; }
+      .work .work-hero .desktop-screen img {
+        top: 0 !important;
+        transition: top linear .1s !important; } }
+    @media only screen and (min-width: 769px) {
+      .work .work-hero .scroll-top-mobile,
+      .work .work-hero .scroll-top-desktop {
+        opacity: 0;
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        top: 0; }
+      .work .work-hero .scroll-bottom-mobile,
+      .work .work-hero .scroll-bottom-desktop {
+        opacity: 0;
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        bottom: 0; } }
     .work .work-hero .mobile-device {
       display: none; }
     .work .work-hero .mobile-device {
@@ -1104,9 +1119,7 @@ a {
       display: none; }
       @media only screen and (min-width: 561px) {
         .work .work-hero .desktop-device {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
+          display: block;
           position: relative; } }
       @media only screen and (min-width: 769px) {
         .work .work-hero .desktop-device {
@@ -1132,3 +1145,14 @@ a {
   background: #83BDFF;
   background: linear-gradient(to right, #83BDFF 0%, #64ACFF 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83BDFF', endColorstr='#64ACFF',GradientType=1 ); }
+
+.ursa {
+  background: #FBB3B4;
+  background: linear-gradient(to right, #FBB3B4 0%, #FC9FA1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FBB3B4', endColorstr='#FC9FA1',GradientType=1 ); }
+
+.resolve-slide .color-overlay {
+  background-color: #83BDFF; }
+
+.ursa-slide .color-overlay {
+  background-color: #FBB3B4; }
