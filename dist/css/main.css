@@ -1178,15 +1178,15 @@ a:hover {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83BDFF', endColorstr='#64ACFF',GradientType=1 ); }
   .ursa a:hover {
     color: #FBB3B4; }
+  .ursa .mobile-screen {
+    border: 2px solid #fff; }
+  .ursa .desktop-screen {
+    border: 7px solid #fff; }
 
 .resolve {
   background: #FBB3B4;
   background: linear-gradient(to right, #FBB3B4 0%, #FC9FA1 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FBB3B4', endColorstr='#FC9FA1',GradientType=1 ); }
-  .resolve .mobile-screen {
-    border: 2px solid #fff; }
-  .resolve .desktop-screen {
-    border: 7px solid #fff; }
 
 .ursa-slide .color-overlay {
   background-color: #83BDFF; }

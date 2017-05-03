@@ -346,6 +346,12 @@ a:hover {
 	background: -webkit-linear-gradient(left, #83BDFF 0%,#64ACFF 100%);
 	background: linear-gradient(to right, #83BDFF 0%,#64ACFF 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83BDFF', endColorstr='#64ACFF',GradientType=1 );
+	.mobile-screen {
+		border: 2px solid #fff;
+	}
+	.desktop-screen {
+		border: 7px solid #fff;
+	}
 }
 .resolve {
 	background: #FBB3B4;
@@ -353,12 +359,6 @@ a:hover {
 	background: -webkit-linear-gradient(left, #FBB3B4 0%,#FC9FA1 100%);
 	background: linear-gradient(to right, #FBB3B4 0%,#FC9FA1 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FBB3B4', endColorstr='#FC9FA1',GradientType=1 );
-	.mobile-screen {
-		border: 2px solid #fff;
-	}
-	.desktop-screen {
-		border: 7px solid #fff;
-	}
 }
 .ursa-slide {
 	.color-overlay {
