@@ -9,9 +9,19 @@ body {
 	background: -webkit-linear-gradient(left, #fdfbfb 0%,#ebedee 100%);
 	background: linear-gradient(to right, #fdfbfb 0%,#ebedee 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfbfb', endColorstr='#ebedee',GradientType=1 );
-
-    background-image: url(../img/confetti-bg.svg);
+}
+.background {
+	background-image: url(../img/confetti-bg.svg);
     background-repeat: repeat;
+    position: absolute;
+    height: 100%;
+	top: 0; 
+	left: 0; 
+	right: 0; 
+	bottom: 0;
+}
+.background + .content-block{
+	margin-top: 0;
 }
 ul {
 	margin: 0;
@@ -214,6 +224,9 @@ a:hover {
 	}
 	a:hover {
 		color: #83BDFF;
+    }
+    .background {
+    	background-image: url(../img/confetti-opacity.svg);
     }
 	.go-back {
 		padding-top: 40px;

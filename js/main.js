@@ -1,33 +1,9 @@
 $(document).ready(function () {
-	var movementStrength = 50;
-	var height = movementStrength / $(window).height();
-	var width = movementStrength / $(window).width();
-	$("body").mousemove(function(e){
-	          var pageX = e.pageX - ($(window).width() / 2);
-	          var pageY = e.pageY - ($(window).height() / 2);
-	          var newvalueX = width * pageX * -1 - 25;
-	          var newvalueY = height * pageY * -1 - 50;
-	          $('body').css("background-position", newvalueX+"px     "+newvalueY+"px");
+	$('body').mousemove(function(e){
+	    var amountMovedX = (e.pageX * -1 / 20);
+	    var amountMovedY = (e.pageY * -1 / 20);
+	    $('.background').css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
 	});
-
-	// $('.scroll-top-mobile').mouseover(function() {
-	// 	$('.mobile-screen img').css("top", 0);
-	// });
-
-	// $('.scroll-bottom-mobile').mouseover(function() {
-	// 	$('.mobile-screen img').css("top", -500);
-	// });
-
-	// $('.scroll-top-desktop').mouseover(function() {
-	// 	$('.desktop-screen img').css("top", 0);
-	// });
-
-	// $('.scroll-bottom-desktop').mouseover(function() {
-	// 	$('.desktop-screen img').css("top", -750);
-	// });
-	
-
-
 
 	/**
      * Start of Barba.js 
@@ -82,24 +58,7 @@ $(document).ready(function () {
 
 		      _this.done();
 		    });
-
-		 //    $('.scroll-top-mobile').mouseover(function() {
-			// 	$('.mobile-screen img').css("top", 0);
-			// });
-
-			// $('.scroll-bottom-mobile').mouseover(function() {
-			// 	$('.mobile-screen img').css("top", -1000);
-			// });
-
-			// $('.scroll-top-desktop').mouseover(function() {
-			// 	$('.desktop-screen img').css("top", 0);
-			// });
-
-			// $('.scroll-bottom-desktop').mouseover(function() {
-			// 	$('.desktop-screen img').css("top", -2000);
-			// });
-
-		   
+	   
 		 }
 
 		});
