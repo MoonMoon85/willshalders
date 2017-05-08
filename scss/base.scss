@@ -155,12 +155,17 @@ a:hover {
 .slide {
 	margin-bottom: 10px;
 	.color-overlay {
-		position: absolute;
+		left: 1%;
+    	width: 98.2%;
+    	position: absolute;
 		top: 0;
-		left: 2%;
-    	width: 96.2%;
 		height: 100%;
-		opacity: .8;
+		opacity: .8; 
+		@include respond-to(screen-md) {
+			left: 2%;
+	    	width: 96.2%; 
+		}
+		
 	}
 	.slider-content {
 		padding: 3% 0 40px 20px;
@@ -240,11 +245,13 @@ a:hover {
 	.work-hero {
 
 		@include respond-to-minmax(0px, 769px) {
+			margin-bottom: 40px;
 			.mobile-screen {
 			    img {
 			    	top: 0 !important;
 			    	transition: top linear .1s !important;
 			    }
+			    margin-bottom: 40px;
 			}
 
 			.desktop-screen {
@@ -279,12 +286,14 @@ a:hover {
 		}
 
 	    .mobile-device {
+    	    margin: 0 auto;
 	    	display: block;
 			max-width: 137px;
 			position: relative;
 			
 			@include respond-to(screen-sm) {
 				display: none;	
+			    margin: 0;
 			}
 
 			@include respond-to(screen-md) {

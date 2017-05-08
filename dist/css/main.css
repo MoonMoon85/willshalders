@@ -1048,12 +1048,16 @@ a:hover {
 .slide {
   margin-bottom: 10px; }
   .slide .color-overlay {
+    left: 1%;
+    width: 98.2%;
     position: absolute;
     top: 0;
-    left: 2%;
-    width: 96.2%;
     height: 100%;
     opacity: .8; }
+    @media only screen and (min-width: 769px) {
+      .slide .color-overlay {
+        left: 2%;
+        width: 96.2%; } }
   .slide .slider-content {
     padding: 3% 0 40px 20px;
     position: absolute; }
@@ -1109,12 +1113,16 @@ a:hover {
       .work .go-back {
         padding-top: 80px; } }
   @media only screen and (min-width: 0px) and (max-width: 769px) {
-    .work .work-hero .mobile-screen img {
-      top: 0 !important;
-      transition: top linear .1s !important; }
-    .work .work-hero .desktop-screen img {
-      top: 0 !important;
-      transition: top linear .1s !important; } }
+    .work .work-hero {
+      margin-bottom: 40px; }
+      .work .work-hero .mobile-screen {
+        margin-bottom: 40px; }
+        .work .work-hero .mobile-screen img {
+          top: 0 !important;
+          transition: top linear .1s !important; }
+      .work .work-hero .desktop-screen img {
+        top: 0 !important;
+        transition: top linear .1s !important; } }
   @media only screen and (min-width: 769px) {
     .work .work-hero .scroll-top-mobile,
     .work .work-hero .scroll-top-desktop {
@@ -1133,12 +1141,14 @@ a:hover {
   .work .work-hero .mobile-device {
     display: none; }
   .work .work-hero .mobile-device {
+    margin: 0 auto;
     display: block;
     max-width: 137px;
     position: relative; }
     @media only screen and (min-width: 561px) {
       .work .work-hero .mobile-device {
-        display: none; } }
+        display: none;
+        margin: 0; } }
     @media only screen and (min-width: 769px) {
       .work .work-hero .mobile-device {
         display: -webkit-box;
