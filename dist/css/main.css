@@ -885,7 +885,7 @@ body {
 
 .background {
   background-image: url(../img/confetti-bg.svg);
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   position: absolute;
   height: 100%;
   top: 0;
@@ -1062,29 +1062,23 @@ a:hover {
     padding: 3% 0 40px 20px;
     position: absolute; }
     .slide .slider-content h2 {
-      color: #fff;
       margin-bottom: 0; }
     .slide .slider-content h3 {
-      color: #fff;
       margin-bottom: 0; }
     .slide .slider-content p {
-      color: #fff;
       font-weight: 300; }
     .slide .slider-content a {
-      color: #fff;
       font-weight: 300;
       text-decoration: none;
       border: 1px solid #fff;
       padding: 5px 10px; }
     .slide .slider-content a {
-      color: #fff;
       font-weight: 300;
       text-decoration: none;
       border: 1px solid #fff;
       padding: 5px 10px;
       transition: top linear 8s; }
     .slide .slider-content a {
-      color: #fff;
       font-weight: 300;
       text-decoration: none;
       border: 1px solid #fff;
@@ -1095,18 +1089,26 @@ a:hover {
       background: #fff;
       color: #83BDFF; }
 
+.showoff .row {
+  margin-bottom: 80px; }
+
+.showoff img {
+  max-width: 556px;
+  box-shadow: -2px 1px 45px -5px rgba(0, 0, 0, 0.83); }
+
+.showoff .right img {
+  float: right; }
+
+.showoff .right div:first-child {
+  text-align: right; }
+
 .work {
   height: 100%; }
-  .work h1, .work h2, .work h3, .work h4, .work p, .work a {
-    color: #fff; }
   .work a {
-    border-color: #fff;
     transition: background .25s ease-in-out;
     transition: color .25s ease-in-out; }
   .work a:hover {
     color: #83BDFF; }
-  .work .background {
-    background-image: url(../img/confetti-opacity.svg); }
   .work .go-back {
     padding-top: 40px; }
     @media only screen and (min-width: 769px) {
@@ -1124,39 +1126,39 @@ a:hover {
         top: 0 !important;
         transition: top linear .1s !important; } }
   @media only screen and (min-width: 769px) {
-    .work .work-hero .scroll-top-mobile,
-    .work .work-hero .scroll-top-desktop {
-      opacity: 0;
-      width: 100%;
-      height: 50%;
-      position: absolute;
-      top: 0; }
-    .work .work-hero .scroll-bottom-mobile,
-    .work .work-hero .scroll-bottom-desktop {
-      opacity: 0;
-      width: 100%;
-      height: 50%;
-      position: absolute;
-      bottom: 0; } }
+    .work .work-hero {
+      margin-top: 80px;
+      margin-bottom: 80px; }
+      .work .work-hero .scroll-top-mobile,
+      .work .work-hero .scroll-top-desktop {
+        opacity: 0;
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        top: 0; }
+      .work .work-hero .scroll-bottom-mobile,
+      .work .work-hero .scroll-bottom-desktop {
+        opacity: 0;
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        bottom: 0; } }
   .work .work-hero .mobile-device {
     display: none; }
   .work .work-hero .mobile-device {
     margin: 0 auto;
-    display: block;
+    display: inline-block;
     max-width: 137px;
-    position: relative; }
+    position: relative;
+    display: none; }
     @media only screen and (min-width: 561px) {
       .work .work-hero .mobile-device {
-        display: none;
         margin: 0; } }
     @media only screen and (min-width: 769px) {
       .work .work-hero .mobile-device {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        position: relative;
-        top: 51%;
-        left: 6%; } }
+        display: inline-block;
+        position: absolute;
+        bottom: 0; } }
     .work .work-hero .mobile-device .mobile-screen {
       position: absolute;
       width: 91%;
@@ -1174,13 +1176,12 @@ a:hover {
     display: none; }
     @media only screen and (min-width: 561px) {
       .work .work-hero .desktop-device {
-        display: block;
+        display: inline-block;
         position: relative; } }
     @media only screen and (min-width: 769px) {
       .work .work-hero .desktop-device {
         max-width: 658px;
         position: relative;
-        top: -19%;
         left: 25%; } }
     .work .work-hero .desktop-device .desktop-screen {
       position: absolute;
@@ -1195,24 +1196,17 @@ a:hover {
         top: 0;
         transition: top linear 8s; }
 
-.ursa {
-  background: #83BDFF;
-  background: linear-gradient(to right, #83BDFF 0%, #64ACFF 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83BDFF', endColorstr='#64ACFF',GradientType=1 ); }
-  .ursa a:hover {
-    color: #FBB3B4; }
-  .ursa .mobile-screen {
-    border: 2px solid #fff; }
-  .ursa .desktop-screen {
-    border: 7px solid #fff; }
+.ursa a:hover {
+  color: #FBB3B4; }
 
-.resolve {
-  background: #FBB3B4;
-  background: linear-gradient(to right, #FBB3B4 0%, #FC9FA1 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FBB3B4', endColorstr='#FC9FA1',GradientType=1 ); }
+.ursa .mobile-screen {
+  border: 2px solid #fff; }
+
+.ursa .desktop-screen {
+  border: 7px solid #fff; }
 
 .ursa-slide .color-overlay {
-  background-color: #83BDFF; }
+  background-color: #ebedee; }
 
 .resolve-slide .color-overlay {
-  background-color: #FBB3B4; }
+  background-color: #ebedee; }

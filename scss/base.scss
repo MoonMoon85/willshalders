@@ -12,7 +12,7 @@ body {
 }
 .background {
 	background-image: url(../img/confetti-bg.svg);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     position: absolute;
     height: 100%;
 	top: 0; 
@@ -172,26 +172,26 @@ a:hover {
 		position: absolute;
 
 		h2 {
-			color: #fff;
+			
 			margin-bottom: 0;
 		}
 		h3 {
-			color: #fff;
+			
 			margin-bottom: 0;
 		}
 		p {
-			color: #fff;
+			
 			font-weight: 300;
 		}
 		a {
-			color: #fff;
+			
 			font-weight: 300;
 			text-decoration: none;
 			border: 1px solid #fff;
 			padding: 5px 10px;
 		}
 		a {
-			color: #fff;
+			
 			font-weight: 300;
 			text-decoration: none;
 			border: 1px solid #fff;
@@ -199,7 +199,7 @@ a:hover {
 			transition: top linear 8s;
 		}
 		a {
-			color: #fff;
+			
 			font-weight: 300;
 			text-decoration: none;
 			border: 1px solid #fff;
@@ -218,21 +218,35 @@ a:hover {
 	}
 }
 
-.work {
-	h1, h2, h3, h4, p, a {
-		color: #fff;
+.showoff {
+	.row {
+		margin-bottom: 80px;
 	}
+	img {
+		max-width: 556px;
+		-webkit-box-shadow: -2px 1px 45px -5px rgba(0,0,0,0.83);
+		-moz-box-shadow: -2px 1px 45px -5px rgba(0,0,0,0.83);
+		box-shadow: -2px 1px 45px -5px rgba(0,0,0,0.83);
+	}
+	.right {
+		img {
+			float: right;
+		}
+		div:first-child {
+			text-align: right;
+		}
+	}
+}
+
+.work {
 	a {
-		border-color: #fff;
 		transition: background .25s ease-in-out;
 		transition: color .25s ease-in-out;
 	}
 	a:hover {
 		color: #83BDFF;
     }
-    .background {
-    	background-image: url(../img/confetti-opacity.svg);
-    }
+   
 	.go-back {
 		padding-top: 40px;
 
@@ -263,6 +277,8 @@ a:hover {
 		}
 
 		@include respond-to(screen-md) {
+			margin-top: 80px;
+			margin-bottom: 80px;
 			.scroll-top-mobile,
 			.scroll-top-desktop {
 				opacity: 0;
@@ -287,20 +303,20 @@ a:hover {
 
 	    .mobile-device {
     	    margin: 0 auto;
-	    	display: block;
+	    	display: inline-block;
 			max-width: 137px;
 			position: relative;
+			display: none;
 			
 			@include respond-to(screen-sm) {
-				display: none;	
+					
 			    margin: 0;
 			}
 
 			@include respond-to(screen-md) {
-				display: flex;
-				position: relative;
-		        top: 51%;
-    			left: 6%;
+				display: inline-block;
+				position: absolute;
+			    bottom: 0;
 			}
 
 			
@@ -328,14 +344,13 @@ a:hover {
 			display: none;
 
 			@include respond-to(screen-sm) {
-				display: block;
+				display: inline-block;
 				position: relative;
 			}
 
 		    @include respond-to(screen-md) {	    	
 		    	max-width: 658px;
 		    	position: relative;
-		        top: -19%;
     			left: 25%;
 			}
 
@@ -363,11 +378,6 @@ a:hover {
 	a:hover {
 		color: #FBB3B4;
 	}
-	background: #83BDFF;
-	background: -moz-linear-gradient(left, #83BDFF 0%, #64ACFF 100%);
-	background: -webkit-linear-gradient(left, #83BDFF 0%,#64ACFF 100%);
-	background: linear-gradient(to right, #83BDFF 0%,#64ACFF 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83BDFF', endColorstr='#64ACFF',GradientType=1 );
 	.mobile-screen {
 		border: 2px solid #fff;
 	}
@@ -375,20 +385,14 @@ a:hover {
 		border: 7px solid #fff;
 	}
 }
-.resolve {
-	background: #FBB3B4;
-	background: -moz-linear-gradient(left, #FBB3B4 0%, #FC9FA1 100%);
-	background: -webkit-linear-gradient(left, #FBB3B4 0%,#FC9FA1 100%);
-	background: linear-gradient(to right, #FBB3B4 0%,#FC9FA1 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FBB3B4', endColorstr='#FC9FA1',GradientType=1 );
-}
+
 .ursa-slide {
 	.color-overlay {
-		background-color: #83BDFF;
+		background-color: #ebedee;
 	}
 }
 .resolve-slide {
 	.color-overlay {
-		background-color: #FBB3B4;
+		background-color: #ebedee;
 	}
 }

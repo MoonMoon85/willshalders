@@ -1,10 +1,10 @@
+$('body').mousemove(function(e){
+    var amountMovedX = (e.pageX * -1 / 20);
+    var amountMovedY = (e.pageY * -1 / 20);
+    $('.background').css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
+});
 $(document).ready(function () {
-	$('body').mousemove(function(e){
-	    var amountMovedX = (e.pageX * -1 / 20);
-	    var amountMovedY = (e.pageY * -1 / 20);
-	    $('.background').css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
-	});
-
+	
 	/**
      * Start of Barba.js 
      */
