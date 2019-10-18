@@ -16,7 +16,7 @@ var gulp        = require('gulp'),
     pngquant    = require('imagemin-pngquant'),
     plumber     = require('gulp-plumber'),
     deploy      = require('gulp-gh-pages'),
-    notify      = require('gulp-notify');
+    notify      = require('gulp-notify'); 
 
 
 gulp.task('scss', function() {
